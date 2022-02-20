@@ -2,7 +2,7 @@ PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
 CREATE TABLE IF NOT EXISTS "tiles" ("x" INTEGER NOT NULL, "y" INTEGER NOT NULL, "z" INTEGER NOT NULL, "s" INTEGER, "image" BLOB, "time" INTEGER, PRIMARY KEY ("x", "y", "z"));
 CREATE TABLE IF NOT EXISTS "info" ("useragent" TEXT, "minzoom" TEXT, "maxzoom" TEXT, "url" TEXT, "randoms" TEXT, "referer" TEXT, "ellipsoid" INTEGER, "inverted_y" INTEGER, "tilesize" TEXT, "timeSupported" TEXT, "timecolumn" TEXT, "expireminutes" TEXT, "tilenumbering" TEXT);
-INSERT INTO info VALUES('OsmAnd Maps CFNetwork','6','18','https://wxs.ign.fr/cartes/geoportail/wmts?layer=GEOGRAPHICALGRIDSYSTEMS.MAPS&style=normal&tilematrixset=PM&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fjpeg&TileMatrix={0}&TileCol={1}&TileRow={2}','','',0,0,'256','yes','yes','43200','simple');
+INSERT INTO info VALUES('OsmAnd Maps CFNetwork','6','18','https://wxs.ign.fr/an7nvfzojv5wa96dsga5nk8w/geoportail/wmts?layer=GEOGRAPHICALGRIDSYSTEMS.MAPS&style=normal&tilematrixset=PM&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fjpeg&TileMatrix={0}&TileCol={1}&TileRow={2}','','',0,0,'256','yes','yes','43200','simple');
 CREATE INDEX "index_tiles_on_x" ON "tiles" ("x");
 CREATE INDEX "index_tiles_on_y" ON "tiles" ("y");
 CREATE INDEX "index_tiles_on_z" ON "tiles" ("z");
