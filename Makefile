@@ -6,3 +6,4 @@ all:
 	sqlite3 "IGN BD Ortho.sqlitedb" < IGN-bdortho.txt
 	sqlite3 "IGN Orthophotos 1950-1965.sqlitedb" < IGN-orthophotos-1950-1965.txt
 	sqlite3 "IGN Scan OACI.sqlitedb" < IGN-scan-oaci.txt 
+	sqlite3 "IGN Traces Randos Hivernales.sqlitedb" < IGN-trace-rando-hivernale.txt
