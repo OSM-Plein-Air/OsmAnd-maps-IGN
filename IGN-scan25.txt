@@ -1,8 +1,8 @@
 PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
 CREATE TABLE IF NOT EXISTS "tiles" ("x" INTEGER NOT NULL, "y" INTEGER NOT NULL, "z" INTEGER NOT NULL, "image" BLOB, "time" INTEGER, PRIMARY KEY ("x", "y", "z"));
-CREATE TABLE IF NOT EXISTS "info" ("minzoom" TEXT, "maxzoom" TEXT, "url" TEXT, "randoms" TEXT, "referer" TEXT, "ellipsoid" INTEGER, "inverted_y" INTEGER, "tilesize" TEXT, "timecolumn" TEXT, "expireminutes" TEXT, "tilenumbering" TEXT);
-INSERT INTO info VALUES('6','16','https://data.geopf.fr/private/wmts?apikey=ign_scan_ws&Layer=GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR&Style=normal&TileMatrixSet=PM&SERVICE=WMTS&REQUEST=GetTile&Version=1.0.0&FORMAT=image/jpeg&TileMatrix={0}&TileCol={1}&TileRow={2}','','',0,0,'256','yes','43200','simple');
+CREATE TABLE IF NOT EXISTS "info" ("title" TEXT, "minzoom" TEXT, "maxzoom" TEXT, "url" TEXT, "randoms" TEXT, "referer" TEXT, "ellipsoid" INTEGER, "inverted_y" INTEGER, "tilesize" TEXT, "timecolumn" TEXT, "expireminutes" TEXT, "tilenumbering" TEXT);
+INSERT INTO info VALUES('🇫🇷 IGN Scan25','6','16','https://data.geopf.fr/private/wmts?apikey=ign_scan_ws&Layer=GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR&Style=normal&TileMatrixSet=PM&SERVICE=WMTS&REQUEST=GetTile&Version=1.0.0&FORMAT=image/jpeg&TileMatrix={0}&TileCol={1}&TileRow={2}','','',0,0,'256','yes','43200','simple');
 CREATE INDEX "index_tiles_on_x" ON "tiles" ("x");
 CREATE INDEX "index_tiles_on_y" ON "tiles" ("y");
 CREATE INDEX "index_tiles_on_z" ON "tiles" ("z");
